@@ -10,3 +10,6 @@ Normally, a plugin created for general distribution would utilize OOP best pract
 
 ## Installation
 - Install and activate like any other plugin.
+
+## Notes
+- Borrowed heavily from Adam Clark's project at https://github.com/avclark/10up-bcl
