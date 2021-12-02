@@ -6,29 +6,31 @@
 }
 
 ::selection {
-  background: #dc2e2e; /* WebKit/Blink Browsers */
+  background: #f2720c; /* WebKit/Blink Browsers */
   color: #fff;
 }
 
 
 /**
- * Login Form syles
+ * Set your background image here.
  */
 .login h1 a {
-  background-image: url('../images/rocketgeek_avatar.png');
+  background-image: url('../images/logo.png');
   height: 96px;
   width: auto;
 }
 
-.login h1 a:focus {
-  box-shadow: none;
-}
-
+/**
+ * The main message text.
+ */
 .welcome-message {
   color: #fff;
   font-size: 20px;
 }
 
+/**
+ * General properties for the form
+ */
 .login form {
   margin-top: 20px;
   margin-left: 0;
@@ -39,11 +41,17 @@
   border: none;
 }
 
+/**
+ * The text labels for the input fields
+ */
 .login label {
   font-size: 12px;
   color: #72777c;
 }
 
+/**
+ * Primary style of the input fields.
+ */
 .login input[type="text"],
 .login input[type="password"] {
   background: rgba(255, 255, 255, 0.04);
@@ -53,6 +61,11 @@
   padding: 10px;
 }
 
+/**
+ * This section cleans up the border/colors/action
+ * when the cursor is in the input fields.
+ * Customize as desired.
+ */
 input[type=text]:focus,
 input[type=password]:focus {
   background: rgba(255, 255, 255, 0.06);
@@ -80,7 +93,13 @@ input:-webkit-autofill {
 input:-webkit-autofill:focus {
   -webkit-text-fill-color: #fff;
 }
+/**
+ * End of the border/colors/action
+ */
 
+/**
+ * Class forgetmenot is the "remember me" checkbox.
+ */
 .login form .forgetmenot {
   font-weight: 400;
   float: none;
@@ -122,7 +141,13 @@ input[type=checkbox]:checked:before {
   font: 400 21px/1 dashicons;
   color: #000;
 }
+/**
+ * End of the "remember me" checkbox.
+ */
 
+/**
+ * This is where we style the button.
+ */
 body.login .button.button-large {
   height: 48px;
 }
@@ -130,46 +155,46 @@ body.login .button.button-large {
 .login .button-primary {
   width: 100%;
   float: none;
-  background-color:#dc2e2e !important;
-  background: -webkit-gradient(linear, left top, left bottom, from(#dc2e2e), to(#dc2e2e));
-  background: -webkit-linear-gradient(top, #dc2e2e, #dc2e2e);
-  background: -moz-linear-gradient(top, #dc2e2e, #dc2e2e);
-  background: -ms-linear-gradient(top, #dc2e2e, #dc2e2e);
-  background: -o-linear-gradient(top, #dc2e2e, #dc2e2e);
-  background-image: -ms-linear-gradient(top, #dc2e2e 0%, #dc2e2e 100%);
+  background-color:#f2720c !important;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f2720c), to(#f2720c));
+  background: -webkit-linear-gradient(top, #f2720c, #f2720c);
+  background: -moz-linear-gradient(top, #f2720c, #f2720c);
+  background: -ms-linear-gradient(top, #f2720c, #f2720c);
+  background: -o-linear-gradient(top, #f2720c, #f2720c);
+  background-image: -ms-linear-gradient(top, #f2720c 0%, #f2720c 100%);
   color: #ffffff;
   -webkit-border-radius: 4px;
-  border: 1px solid #c32727;
+  border: 1px solid #f38632;
   -webkit-box-shadow: none;
   box-shadow: none;
   text-decoration: none;
-  text-shadow: 0 -1px 1px #c32727, 1px 0 1px #c32727, 0 1px 1px #c32727, -1px 0 1px #c32727;
+  text-shadow: 0 -1px 1px #f38632, 1px 0 1px #f38632, 0 1px 1px #f38632, -1px 0 1px #f38632;
 }
 
 .login .button-primary:hover {
-  background-color:#dc2e2e !important;
-  background: -webkit-gradient(linear, left top, left bottom, from(#dc2e2e), to(#c32727 ));
-  background: -webkit-linear-gradient(top, #dc2e2e, #c32727 );
-  background: -moz-linear-gradient(top, #dc2e2e, #c32727 );
-  background: -ms-linear-gradient(top, #dc2e2e, #c32727 );
-  background: -o-linear-gradient(top, #dc2e2e, #c32727 );
-  background-image: -ms-linear-gradient(top, #0b436e 0%, #c32727 100%);
+  background-color:#f2720c !important;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f2720c), to(#f38632 ));
+  background: -webkit-linear-gradient(top, #f2720c, #f38632 );
+  background: -moz-linear-gradient(top, #f2720c, #f38632 );
+  background: -ms-linear-gradient(top, #f2720c, #f38632 );
+  background: -o-linear-gradient(top, #f2720c, #f38632 );
+  background-image: -ms-linear-gradient(top, #0b436e 0%, #f38632 100%);
   color: #fff;
   -webkit-border-radius: 4px;
-  border: 1px solid #c32727;
+  border: 1px solid #f38632;
 }
 
 .login .button-primary:active {
-  background-color:#dc2e2e !important;
-  background: -webkit-gradient(linear, left top, left bottom, from(#c32727), to(#dc2e2e));
-  background: -webkit-linear-gradient(top, #c32727, #dc2e2e);
-  background: -moz-linear-gradient(top, #c32727, #dc2e2e);
-  background: -ms-linear-gradient(top, #c32727, #dc2e2e);
-  background: -o-linear-gradient(top, #c32727, #dc2e2e);
-  background-image: -ms-linear-gradient(top, #c32727 0%, #dc2e2e 100%);
+  background-color:#f2720c !important;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f38632), to(#f2720c));
+  background: -webkit-linear-gradient(top, #f38632, #f2720c);
+  background: -moz-linear-gradient(top, #f38632, #f2720c);
+  background: -ms-linear-gradient(top, #f38632, #f2720c);
+  background: -o-linear-gradient(top, #f38632, #f2720c);
+  background-image: -ms-linear-gradient(top, #f38632 0%, #f2720c 100%);
   color: #fff;
   -webkit-border-radius: 4px;
-  border: 1px solid #c32727;
+  border: 1px solid #f38632;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -177,22 +202,28 @@ body.login .button.button-large {
 .login .button-primary:focus {
   width: 100%;
   float: none;
-  background-color:#dc2e2e !important;
-  background: -webkit-gradient(linear, left top, left bottom, from(#dc2e2e), to(#dc2e2e));
-  background: -webkit-linear-gradient(top, #dc2e2e, #dc2e2e);
-  background: -moz-linear-gradient(top, #dc2e2e, #dc2e2e);
-  background: -ms-linear-gradient(top, #dc2e2e, #dc2e2e);
-  background: -o-linear-gradient(top, #dc2e2e, #dc2e2e);
-  background-image: -ms-linear-gradient(top, #dc2e2e 0%, #dc2e2e 100%);
+  background-color:#f2720c !important;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f2720c), to(#f2720c));
+  background: -webkit-linear-gradient(top, #f2720c, #f2720c);
+  background: -moz-linear-gradient(top, #f2720c, #f2720c);
+  background: -ms-linear-gradient(top, #f2720c, #f2720c);
+  background: -o-linear-gradient(top, #f2720c, #f2720c);
+  background-image: -ms-linear-gradient(top, #f2720c 0%, #f2720c 100%);
   color: #ffffff;
   -webkit-border-radius: 4px;
-  border: 1px solid #c32727;
+  border: 1px solid #f38632;
   -webkit-box-shadow: none;
   box-shadow: none;
   text-decoration: none;
-  text-shadow: 0 -1px 1px #c32727, 1px 0 1px #c32727, 0 1px 1px #c32727, -1px 0 1px #c32727;
+  text-shadow: 0 -1px 1px #f38632, 1px 0 1px #f38632, 0 1px 1px #f38632, -1px 0 1px #f38632;
 }
+/**
+ * End of the button.
+ */
 
+/**
+ * These are the links under the button.
+ */
 .login #nav,
 .login #backtoblog {
   padding: 0;
@@ -210,10 +241,12 @@ body.login .button.button-large {
 
 .login #login_error,
 .login .message {
-  border-left: 4px solid #dc2e2e;
+  border-left: 4px solid #f2720c;
   margin-top: 12px;
 }
-
+/**
+ * End of the links under the button.
+ */
 
 /**
  * Modify styles for screens larger than 480px
@@ -225,7 +258,6 @@ body.login .button.button-large {
   }
 
   .login h1 a {
-    background-image: url(../images/rocketgeek.png);
     background-size: 120px;
     height: 137px;
     width: auto;
