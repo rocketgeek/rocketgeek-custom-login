@@ -20,54 +20,70 @@ if ( ! defined( 'WPINC' ) ) {
 }
 
 class RocketGeek_Custom_Login_Dark {
-	public function run() {
-		add_action( 'login_head',        array( $this, 'enqueue_styles'         ) );
-		add_filter( 'login_headerurl',   array( $this, 'get_login_logo_url'     ) );
-		add_filter( 'login_message',     array( $this, 'message'                ) );
-		add_filter( 'login_footer',      array( $this, 'default_check_remember' ) );
+	static public function run() {
+		add_action( 'init',              array( 'RocketGeek_Custom_Login_Dark', 'load_textdomain'        ) );
+		add_action( 'login_head',        array( 'RocketGeek_Custom_Login_Dark', 'enqueue_styles'         ) );
+		add_filter( 'login_headerurl',   array( 'RocketGeek_Custom_Login_Dark', 'get_login_logo_url'     ) );
+		add_filter( 'login_message',     array( 'RocketGeek_Custom_Login_Dark', 'message'                ) );
+		add_filter( 'login_footer',      array( 'RocketGeek_Custom_Login_Dark', 'default_check_remember' ) );
+	}
+	
+	/**
+	 * Load the translation (if needed).
+	 */
+	static public function load_textdomain() {
+		load_plugin_textdomain( 'rocketgeek-custom-login-dark', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
 	}
 	
 	/**
 	 * Loads the plugin stylesheet.
 	 */
-	function enqueue_styles() {
-		wp_enqueue_style( 'rktgk-cld-styles', plugins_url( 'assets/css/rktgk-cld.css', __FILE__ ) );
+	static public function enqueue_styles() {
+		// Load the non-minified CSS file if script debug is on.
+		$suffix = ( defined( 'SCRIPT_DEBUG' ) && true === SCRIPT_DEBUG ) ? '' : '.min';
+		wp_enqueue_style( 'rktgk-cld-styles', plugins_url( 'assets/css/rktgk-cld' . $suffix . '.css', __FILE__ ) );
+		/**
+		 * If you want to run simple CSS tests without turning on script debug, comment out the 
+		 * line above and uncomment this one. It will just load the regular css file. Once you're done
+		 * with testing, I recommend you minify the css and return to loading the minified version.
+		 */
+		// wp_enqueue_style( 'rktgk-cld-styles', plugins_url( 'assets/css/rktgk-cld.css', __FILE__ ) );
 	}
 
 
 	/**
 	 * Gets the login page logo.
 	 */
-	function get_login_logo_url() {
+	static public function get_login_logo_url() {
 		return get_bloginfo( 'url' );
 	}
 
 	/**
 	 * Handle messaging for different page states.
 	 */
-	function message() {
+	static public function message() {
 
 		// Checks array keys for message display.
-		$action    = array_key_exists( 'action', $_REQUEST    ) ? $_REQUEST['action']    : null;
+		$action    = array_key_exists( 'action',    $_REQUEST ) ? $_REQUEST['action']    : null;
 		$loggedout = array_key_exists( 'loggedout', $_REQUEST ) ? $_REQUEST['loggedout'] : null;
 
 		// Messaging.
 		if ( $action == 'lostpassword' ) {
 			// Lost password message.
-			return '<p class="message">Please enter your username or email address. You will receive a link to create a new password via email.</p>';
+			return '<p class="message">' . __( 'Please enter your username or email address. You will receive a link to create a new password via email.', 'rocketgeek-custom-login-dark' ) . '</p>';
 		} elseif ( $loggedout == true ) {
 			// Logged out message.
 			return '';
 		} else {
 			// General login message.
-			return '<p class="welcome-message">Please Login.</p>';
+			return '<p class="welcome-message">' . __( 'Please Login.', 'rocketgeek-custom-login-dark' ) . '</p>';
 		}
 	}
 
 	/**
-	 * Insert js to make "remember me" checked by default.
+	 * JS to make "remember me" checked by default.
 	 */
-	function default_check_remember() {
+	static public function default_check_remember() {
 		echo 
 		"<script>
 			var rememberMe = document.getElementById('rememberme');
@@ -78,5 +94,4 @@ class RocketGeek_Custom_Login_Dark {
 	}
 }
 
-$rktgk_cld = new RocketGeek_Custom_Login_Dark;
-$rktgk_cld->run();
+RocketGeek_Custom_Login_Dark::run();
