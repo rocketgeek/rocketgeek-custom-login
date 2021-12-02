@@ -1,0 +1,43 @@
+# Copyright (C) 2021 Chad Butler
+# This file is distributed under the same license as the RocketGeek Custom Login (Dark) plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: RocketGeek Custom Login (Dark) 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/rocketgeek-custom-login-dark\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2021-12-02T09:39:37-05:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.4.0\n"
+"X-Domain: rocketgeek-custom-login-dark\n"
+
+#. Plugin Name of the plugin
+msgid "RocketGeek Custom Login (Dark)"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://github.com/rocketgeek/rocketgeek-custom-login-dark"
+msgstr ""
+
+#. Description of the plugin
+msgid "Custom login screen."
+msgstr ""
+
+#. Author of the plugin
+msgid "Chad Butler"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://butlerblog.com"
+msgstr ""
+
+#: rocketgeek-custom-login-dark.php:65
+msgid "Please enter your username or email address. You will receive a link to create a new password via email."
+msgstr ""
+
+#: rocketgeek-custom-login-dark.php:71
+msgid "Please Login."
+msgstr ""
