@@ -1,7 +1,8 @@
 /**
  * Global styles
  */
- body.login {
+ body.login,
+ #wfls-prompt-overlay {
   background: #1a1a1a;
 }
 

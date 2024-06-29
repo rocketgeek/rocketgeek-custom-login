@@ -1,0 +1,285 @@
+/**
+ * Global styles
+ */
+
+::selection {
+  background: #f2720c; /* WebKit/Blink Browsers */
+  color: #fff;
+}
+
+
+/**
+ * Set your background image here.
+ */
+.login h1 a {
+  background-image: url('../images/logo.png');
+  height: 96px;
+  width: auto;
+}
+
+/**
+ * The main message text.
+ */
+.welcome-message {
+  color: #fff;
+  font-size: 20px;
+}
+
+/**
+ * General properties for the form
+ */
+.login form {
+  margin-top: 20px;
+  margin-left: 0;
+  padding: 0;
+  background: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: none;
+}
+
+/**
+ * The text labels for the input fields
+ */
+.login label {
+  font-size: 12px;
+}
+
+/**
+ * Primary style of the input fields.
+ */
+.login input[type="text"],
+.login input[type="password"] {
+  -webkit-border-radius: 4px;
+  padding: 10px;
+}
+
+/**
+ * This section cleans up the border/colors/action
+ * when the cursor is in the input fields.
+ * Customize as desired.
+ */
+input[type=text]:focus,
+input[type=password]:focus {
+
+}
+
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=checkbox]:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+  color: rgba(255, 255, 255, 0.2) !important;
+}
+
+input:-webkit-autofill {
+  -webkit-text-fill-color: #72777c;
+}
+
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #fff;
+}
+/**
+ * End of the border/colors/action
+ */
+
+/**
+ * Class forgetmenot is the "remember me" checkbox.
+ */
+.login form .forgetmenot {
+  font-weight: 400;
+  float: none;
+  margin-bottom: 0;
+}
+
+#login form p.forgetmenot {
+  margin: 2px 6px 16px 2px;
+}
+
+input[type=checkbox] {
+  border: 1px solid #b4b9be;
+  background: #fff;
+  color: #555;
+  clear: none;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 0;
+  height: 16px;
+  margin: -4px 4px 0 0;
+  outline: 0;
+  padding: 0!important;
+  text-align: center;
+  vertical-align: middle;
+  width: 16px;
+  min-width: 16px;
+  -webkit-appearance: none;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+  -webkit-transition: .05s border-color ease-in-out;
+  transition: .05s border-color ease-in-out;
+}
+
+input[type=checkbox]:focus {
+  border-color: #555;
+}
+
+input[type=checkbox]:checked:before {
+  font: 400 21px/1 dashicons;
+  color: #000;
+}
+/**
+ * End of the "remember me" checkbox.
+ */
+
+/**
+ * This is where we style the button.
+ */
+body.login .button.button-large {
+  height: 48px;
+}
+
+.login .button-primary {
+  width: 100%;
+  float: none;
+  background-color:#f2720c !important;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f2720c), to(#f2720c));
+  background: -webkit-linear-gradient(top, #f2720c, #f2720c);
+  background: -moz-linear-gradient(top, #f2720c, #f2720c);
+  background: -ms-linear-gradient(top, #f2720c, #f2720c);
+  background: -o-linear-gradient(top, #f2720c, #f2720c);
+  background-image: -ms-linear-gradient(top, #f2720c 0%, #f2720c 100%);
+  color: #ffffff;
+  -webkit-border-radius: 4px;
+  border: 1px solid #f38632;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  text-decoration: none;
+  text-shadow: 0 -1px 1px #f38632, 1px 0 1px #f38632, 0 1px 1px #f38632, -1px 0 1px #f38632;
+}
+
+.login .button-primary:hover {
+  background-color:#f2720c !important;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f2720c), to(#f38632 ));
+  background: -webkit-linear-gradient(top, #f2720c, #f38632 );
+  background: -moz-linear-gradient(top, #f2720c, #f38632 );
+  background: -ms-linear-gradient(top, #f2720c, #f38632 );
+  background: -o-linear-gradient(top, #f2720c, #f38632 );
+  background-image: -ms-linear-gradient(top, #0b436e 0%, #f38632 100%);
+  color: #fff;
+  -webkit-border-radius: 4px;
+  border: 1px solid #f38632;
+}
+
+.login .button-primary:active {
+  background-color:#f2720c !important;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f38632), to(#f2720c));
+  background: -webkit-linear-gradient(top, #f38632, #f2720c);
+  background: -moz-linear-gradient(top, #f38632, #f2720c);
+  background: -ms-linear-gradient(top, #f38632, #f2720c);
+  background: -o-linear-gradient(top, #f38632, #f2720c);
+  background-image: -ms-linear-gradient(top, #f38632 0%, #f2720c 100%);
+  color: #fff;
+  -webkit-border-radius: 4px;
+  border: 1px solid #f38632;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.login .button-primary:focus {
+  width: 100%;
+  float: none;
+  background-color:#f2720c !important;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f2720c), to(#f2720c));
+  background: -webkit-linear-gradient(top, #f2720c, #f2720c);
+  background: -moz-linear-gradient(top, #f2720c, #f2720c);
+  background: -ms-linear-gradient(top, #f2720c, #f2720c);
+  background: -o-linear-gradient(top, #f2720c, #f2720c);
+  background-image: -ms-linear-gradient(top, #f2720c 0%, #f2720c 100%);
+  color: #ffffff;
+  -webkit-border-radius: 4px;
+  border: 1px solid #f38632;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  text-decoration: none;
+  text-shadow: 0 -1px 1px #f38632, 1px 0 1px #f38632, 0 1px 1px #f38632, -1px 0 1px #f38632;
+}
+/**
+ * End of the button.
+ */
+
+/**
+ * These are the links under the button.
+ */
+.login #nav,
+.login #backtoblog {
+  padding: 0;
+}
+
+.login #nav a,
+.login #backtoblog a {
+  color: #72777c;
+}
+
+.login #nav a:hover,
+.login #backtoblog a:hover {
+  color: #fff;
+}
+
+.login #login_error,
+.login .message {
+  border-left: 4px solid #f2720c;
+  margin-top: 12px;
+}
+/**
+ * End of the links under the button.
+ */
+
+/**
+ * Modify styles for screens larger than 480px
+ */
+@media only screen and (min-width: 480px) {
+
+  #login {
+    width: 400px;
+  }
+
+  .login h1 a {
+    background-size: 120px;
+    height: 137px;
+    width: auto;
+    margin-bottom: 40px;
+  }
+
+  .welcome-message {
+    font-size: 24px;
+  }
+
+  .login label {
+    font-size: 18px;
+  }
+
+  .login input[type="text"],
+  .login input[type="password"] {
+    padding: 15px;
+  }
+
+  #login form p.forgetmenot {
+    margin: 2px 6px 40px 2px;
+  }
+
+  body.login .button.button-large {
+    height: 68px;
+  }
+
+  .login .button-primary {
+    font-size: 24px;
+  }
+
+}
